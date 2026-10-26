@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Create account – Portify</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+<style>
+  /* الـ CSS الوحيد المطلوب: الخلفية المتدرجة + حركة الكروت + شكل الزرار */
+  /* .bg-brand { background: linear-gradient(160deg, #07071f, #1a1a5e); }
+  .btn-brand { background: linear-gradient(90deg, #26337a, #5b50e6); color: #fff; border: 0; } */
+.bg-brand  { background: linear-gradient(160deg, #1a0b2e, #4c1d95); }
+.btn-brand { background: linear-gradient(90deg, #6d28d9, #a855f7); color: #fff; border: 0; }
+  .btn-brand:hover { color: #fff; filter: brightness(1.1); }
+  .float { animation: float 6s ease-in-out infinite; }
+  @keyframes float { 50% { translate: 0 -10px; } }
+</style>
+</head>
+<body class="bg-light">
+
+<div class="container-fluid">
+  <div class="row min-vh-100">
+
+    <!-- ========== الشمال: الفورم ========== -->
+    <div class="col-lg-6 d-flex align-items-center justify-content-center p-4">
+      <div class="w-100" style="max-width: 420px;">
+
+        <div class="d-flex align-items-center gap-2 fw-bold mb-4">
+          <span class="badge bg-primary rounded-3 fs-6">AI</span>AIFolio
+        </div>
+
+        <h1 class="h2 fw-bold">Create your account</h1>
+        <p class="text-secondary mb-4">Start building your portfolio in under a minute.</p>
+<!-- 
+        <button type="button" class="btn btn-white bg-white border w-100 rounded-3 py-2 fw-semibold">
+          <i class="bi bi-google text-danger me-2"></i>Sign up with Google
+        </button> -->
+        <button type="button" class="btn btn-white bg-white border w-100 rounded-3 py-2 fw-semibold">
+  <svg class="me-2" width="18" height="18" viewBox="0 0 48 48" style="vertical-align: -3px;">
+    <path fill="#EA4335" d="M24 9.5c3.5 0 6.6 1.2 9.1 3.6l6.8-6.8C35.8 2.4 30.3 0 24 0 14.6 0 6.5 5.4 2.6 13.2l7.9 6.1C12.4 13.6 17.7 9.5 24 9.5z"/>
+    <path fill="#4285F4" d="M46.5 24.5c0-1.6-.1-3.1-.4-4.5H24v9h12.7c-.6 3-2.3 5.5-4.8 7.2l7.5 5.8c4.4-4.1 7.1-10.1 7.1-17.5z"/>
+    <path fill="#FBBC05" d="M10.5 28.7A14.5 14.5 0 0 1 9.5 24c0-1.6.3-3.2.8-4.7l-7.9-6.1A24 24 0 0 0 0 24c0 3.9.9 7.5 2.6 10.8l7.9-6.1z"/>
+    <path fill="#34A853" d="M24 48c6.5 0 11.9-2.1 15.9-5.8l-7.5-5.8c-2.1 1.4-4.8 2.3-8.4 2.3-6.3 0-11.6-4.1-13.5-9.8l-7.9 6.1C6.5 42.6 14.6 48 24 48z"/>
+  </svg>Sign up with Google
+</button>
+
+        <div class="d-flex align-items-center gap-3 text-secondary small my-3">
+          <hr class="flex-grow-1 m-0"> or with email <hr class="flex-grow-1 m-0">
+        </div>
+
+        <form id="signup" class="needs-validation" novalidate>
+
+          <label class="form-label small fw-semibold" for="name">Full name</label>
+          <div class="input-group mb-3 has-validation">
+            <span class="input-group-text bg-white"><i class="bi bi-person"></i></span>
+            <input id="name" type="text" class="form-control py-2" placeholder="Toka Hassan" required minlength="2">
+            <div class="invalid-feedback">Please enter your name.</div>
+          </div>
+
+          <label class="form-label small fw-semibold" for="email">Email</label>
+          <div class="input-group mb-3 has-validation">
+            <span class="input-group-text bg-white"><i class="bi bi-envelope"></i></span>
+            <input id="email" type="email" class="form-control py-2" placeholder="you@example.com" required>
+            <div class="invalid-feedback">Enter a valid email address.</div>
+          </div>
+
+          <label class="form-label small fw-semibold" for="password">Password</label>
+          <div class="input-group has-validation">
+            <span class="input-group-text bg-white"><i class="bi bi-lock"></i></span>
+            <input id="password" type="password" class="form-control py-2" placeholder="At least 8 characters" required minlength="8">
+            <button class="btn btn-outline-secondary toggle-pw" type="button" data-target="password"><i class="bi bi-eye"></i></button>
+            <div class="invalid-feedback">Password must be at least 8 characters.</div>
+          </div>
+          <div class="progress mt-2 mb-3" style="height: 5px;">
+            <div id="strength" class="progress-bar" style="width: 0%"></div>
+          </div>
+
+          <label class="form-label small fw-semibold" for="confirm">Confirm password</label>
+          <div class="input-group mb-3 has-validation">
+            <span class="input-group-text bg-white"><i class="bi bi-shield-lock"></i></span>
+            <input id="confirm" type="password" class="form-control py-2" placeholder="Repeat your password" required>
+            <button class="btn btn-outline-secondary toggle-pw" type="button" data-target="confirm"><i class="bi bi-eye"></i></button>
+            <div class="invalid-feedback">Passwords don't match.</div>
+          </div>
+
+          <div class="form-check mb-4">
+            <input class="form-check-input" type="checkbox" id="terms" required>
+            <label class="form-check-label small text-secondary" for="terms">
+              I agree to the <a href="#">Terms</a> and <a href="#">Privacy Policy</a>
+            </label>
+            <div class="invalid-feedback">You need to accept the terms to continue.</div>
+          </div>
+
+          <button type="submit" class="btn btn-brand w-100 py-2 rounded-3 fw-bold shadow   .btn-main"   >Create account</button>
+        </form>
+
+        <p class="text-center text-secondary small mt-4">Already on Portify? <a href="#" class="fw-semibold text-decoration-none">Sign in</a></p>
+      </div>
+    </div>
+
+    <!-- ========== اليمين: الصورة ========== -->
+    <div class="col-lg-6 d-none d-lg-flex flex-column justify-content-between bg-brand text-white p-5">
+
+      <div>
+        <h2 class="display-5 fw-bold">Your work deserves more than a PDF. <span class="text-info">Share it as one link.</span></h2>
+        <p class="text-white-50 mt-3" style="max-width: 400px;">
+          Join students, developers and designers who show their projects, résumé and links in one beautiful page.
+        </p>
+      </div>
+
+      <div>
+        <div class="position-relative mb-4" style="height: 270px; max-width: 520px;">
+
+          <div class="card border-0 shadow-lg position-absolute float" style="width: 200px; left: 0; bottom: 0; transform: rotate(-4deg);">
+            <div class="card-body">
+              <span class="badge rounded-circle bg-warning text-dark fs-6 mb-2">A</span>
+              <div class="fw-bold">Ahmed</div>
+              <div class="small text-secondary mb-2">@ahmed_dev</div>
+              <span class="badge bg-secondary-subtle text-secondary-emphasis">Portfolio</span>
+              <span class="badge bg-secondary-subtle text-secondary-emphasis">Github</span>
+            </div>
+          </div>
+
+          <div class="card border-0 shadow-lg position-absolute float text-white" style="width: 220px; left: 130px; top: 0; background: #2b2a6b; transform: rotate(2deg); z-index: 2; animation-delay: -2s;">
+            <div class="card-body">
+              <span class="badge rounded-circle bg-info text-dark fs-6 mb-2">S</span>
+              <div class="fw-bold">Salim</div>
+              <div class="small text-white-50 mb-2">@salim_ahmed</div>
+              <span class="badge bg-light bg-opacity-25">Projects</span>
+              <span class="badge bg-light bg-opacity-25">Links</span>
+            </div>
+          </div>
+
+          <div class="card border-0 shadow-lg position-absolute float" style="width: 220px; left: 270px; bottom: 10px; z-index: 3; animation-delay: -4s;">
+            <div class="card-body">
+              <span class="badge text-success position-absolute top-0 end-0 m-3"><i class="bi bi-circle-fill small me-1"></i>Live</span>
+              <span class="badge rounded-circle bg-danger fs-6 mb-2">L</span>
+              <div class="fw-bold">Laila</div>
+              <div class="small text-secondary mb-2">@lyla_mohamed</div>
+              <span class="badge bg-secondary-subtle text-secondary-emphasis">Résumé</span>
+              <span class="badge bg-secondary-subtle text-secondary-emphasis">LinkedIn</span>
+            </div>
+          </div>
+
+        </div>
+
+        <span class="badge rounded-pill bg-light bg-opacity-10 border border-light border-opacity-25 fw-normal py-2 px-3">
+          <i class="bi bi-link-45deg"></i> portify.me/<b>yourname</b>
+        </span>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<!-- <script>
+  const pw = document.getElementById('password');
+  const cf = document.getElementById('confirm');
+  const bar = document.getElementById('strength');
+
+  // قوة الباسورد
+  pw.addEventListener('input', () => {
+    const v = pw.value;
+    let s = 0;
+    if (v.length >= 8) s++;
+    if (/[A-Z]/.test(v) && /[a-z]/.test(v)) s++;
+    if (/\d/.test(v)) s++;
+    if (/[^A-Za-z0-9]/.test(v)) s++;
+    bar.style.width = (v ? s * 25 : 0) + '%';
+    bar.className = 'progress-bar ' + ['bg-danger', 'bg-danger', 'bg-warning', 'bg-primary', 'bg-success'][s];
+    checkMatch();
+  });
+
+  // تطابق الباسوردين
+  function checkMatch() {
+    cf.setCustomValidity(cf.value && cf.value !== pw.value ? 'mismatch' : '');
+  }
+  cf.addEventListener('input', checkMatch);
+
+  // إظهار / إخفاء الباسورد
+  document.querySelectorAll('.toggle-pw').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const input = document.getElementById(btn.dataset.target);
+      const show = input.type === 'password';
+      input.type = show ? 'text' : 'password';
+      btn.innerHTML = show ? '<i class="bi bi-eye-slash"></i>' : '<i class="bi bi-eye"></i>';
+    });
+  });
+
+  // validation
+  document.getElementById('signup').addEventListener('submit', e => {
+    e.preventDefault();
+    checkMatch();
+    e.target.classList.add('was-validated');
+    if (e.target.checkValidity()) {
+      // ابعتي الداتا للـ backend هنا
+      alert('Account created!');
+    }
+  });
+</script> -->
+</body>
+</html>
