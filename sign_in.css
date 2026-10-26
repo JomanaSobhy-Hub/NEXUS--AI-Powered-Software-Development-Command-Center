@@ -1,0 +1,304 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+body {
+  background-color: #f8fafc;
+  }
+.login-container {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+  background-color: #ffffff;
+}
+.left-section {
+  width: 55%;
+  background: linear-gradient(135deg, #1b264a 0%, #090f1e 50%, #202d5b 100%);
+  position: relative;
+  overflow: hidden;
+  color: #ffffff;
+  padding: 48px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+}
+.brand-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.logo-icon {
+  width: 32px;
+  height: 32px;
+  background-color: #4f46e5;
+  color: #fff;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 18px;
+}
+.logo-text {
+  font-size: 20px;
+  font-weight: 700;
+}
+.hero-content {
+  margin-top: 40px;
+  max-width: 480px;
+}
+.hero-content pre {
+  font-size: 35px;
+  line-height: 1.25;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+.hero-content pre span {
+  background: linear-gradient(90deg, #717ad4 0%, #a78bfa 50%, #5293e2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+.hero-content p {
+  color: #94a3b8;
+  font-size: 15px;
+  line-height: 1.6;
+}
+.cards-preview {
+  position: relative;
+  height: 260px;
+  margin-top: 30px;
+}
+.profile-card {
+  position: absolute;
+  width: 230px;
+  padding: 15px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: transform 0.3s ease;
+}
+.card-animated {
+  animation: floatCard 4s ease-in-out infinite alternate;
+  animation-delay: var(--delay);
+}
+@keyframes floatCard {
+  0% { transform: translateY(0px) rotate(-3deg); }
+  100% { transform: translateY(-12px) rotate(2deg); }
+}
+.card-dark {
+  background: #e5dae0;
+  color: #111827;
+  left: 0;
+  bottom: 40px;
+  z-index: 1;
+}
+.card-green {
+  background: #242753;
+  color: #fff;
+  left: 100px;
+  bottom: 80px;
+  z-index: 2;
+}
+.card-light {
+  background: #fdf2f8;
+  color: #111827;
+  left: 200px;
+  bottom: 20px;
+  z-index: 3;
+}
+.user-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+}
+.bg-avatar-1 { background-image: url('image/【AI】冴えない感じの中年男性.jpg'); }
+.bg-avatar-2 { background-image: url('image/تنزيل (1).jpg'); }
+.bg-avatar-3 { background-image: url('image/layered haircuts 💈thin hair.jpg'); }
+.user-name {
+  font-size: 14px;
+  font-weight: 600;
+}
+.user-handle {
+  font-size: 12px;
+  opacity: 0.7;
+}
+.card-pills {
+  display: flex;
+  gap: 6px;
+}
+.card-pills span {
+  font-size: 10px;
+  padding: 4px 8px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.15);
+}
+.card-light .card-pills span {
+  background: rgba(154, 72, 72, 0.08);
+}
+.right-section {
+  background-color:#f8f8ff;
+  width: 55%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+}
+.form-wrapper {
+  width: 100%;
+  max-width: 450px;
+}
+.form-title {
+  font-size: 30px;
+  font-weight: 700px;
+  color: #0f172a;
+  margin-bottom: 10px;
+}
+.form-subtitle {
+  font-size: 14px;
+  color: #64748b;
+  margin-bottom: 38px;
+}
+.google-btn {
+  width: 100%;
+  height: 45px;
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #334155;
+  transition: all 0.2s ease;
+}
+.google-btn:hover {
+  background-color: #f8fafc;
+  border-color: #cbd5e1;
+  box-shadow: 0 2px 6px rgba(37, 36, 36, 0.05);
+}
+.divider {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 20px 0;
+  color: #94a3b8;
+  font-size: 12px;
+}
+.divider::before, .divider::after {
+  content: '';
+  flex: 1;
+  border-bottom: 1px solid #e2e8f0;
+}
+.divider span {
+  padding: 0 10px;
+}
+.form-group {
+  margin-bottom: 16px;
+}
+.label-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  color: #334155;
+  margin-bottom: 6px;
+}
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  height: 42px;
+  padding: 0 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 15px;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+input[type="email"]:focus,
+input[type="password"]:focus {
+  border-color: #4f46e5;
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+}
+.forgot {
+  font-size: 12px;
+  color: #6366f1;
+  text-decoration: none;
+  transition: text-decoration 0.2s ease;
+}
+.forgot:hover {
+  text-decoration: underline;
+}
+.remember-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+.remember-group input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  accent-color: #4f46e5;
+  cursor: pointer;
+}
+.remember-group label {
+  margin-bottom: 0;
+  font-weight: 400;
+  font-size: 13px;
+  color: #475569;
+  cursor: pointer;
+}
+.submit-btn {
+  width: 100%;
+  height: 44px;
+  background: linear-gradient(90deg,#1b3a68 0%, #5458d7  100%);
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+.signup-prompt {
+  text-align: center;
+  margin-top: 24px;
+  font-size: 13px;
+  color: #64748b;
+}
+.signup-link {
+  color: #6366f1;
+  font-weight: 500;
+  text-decoration: none;
+  transition: text-decoration 0.2s ease;
+}
+.signup-link:hover {
+  text-decoration: underline;
+}
+@media (max-width: 850px) {
+  .login-container {
+    flex-direction: column;
+  }
+  .left-section, .right-section {
+    width: 100%;
+  }
+  .left-section {
+    padding: 30px;
+  }
+}
