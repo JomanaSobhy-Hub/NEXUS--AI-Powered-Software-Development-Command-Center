@@ -1,0 +1,459 @@
+* {
+    font-family: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: white;
+}
+
+.navbar {
+    background-color: rgba(240, 248, 255, 0.489);
+    --bs-navbar-color: #64748A;
+    --bs-navbar-hover-color: #101828;
+    --bs-navbar-active-color: #101828;
+    --bs-navbar-nav-link-padding-x: 20px;
+}
+
+.Portify-logo {
+    width: 34px;
+}
+
+.navbar-brand {
+    color: #0b1226;
+    font-weight: 600;
+}
+
+.navbar-nav .nav-link {
+    padding: 10px;
+    border-radius: 20px;
+    font-weight: 500;
+    transition: all 0.5s ease;
+}
+
+.navbar-nav .nav-link.active {
+    background-color: #EBEDFF;
+}
+
+.navbar-toggler {
+    border-color: transparent;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+.navbar-toggler:hover {
+    background-color: #ebedff;
+}
+
+#navbarNav {
+    --bs-offcanvas-height: 30vh;
+    border-radius: 10px;
+}
+
+.sign-btns {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+}
+
+.sign-in-btn {
+    background-color: transparent;
+    border-color: transparent;
+    border-radius: 20px;
+    padding: 10px 15px 10px 15px;
+    color: #101828;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.5s ease;
+}
+
+.create-btn {
+    background-image: linear-gradient(135deg, #6d5df0, #4f8bf5);
+    color: white;
+    padding: 10px 15px 10px 15px;
+    border-radius: 20px;
+    box-shadow: 0 10px 24px rgba(99, 102, 241, 0.20);
+    transform: translateY(0);
+    text-decoration: none;
+    transition: all 0.5s ease;
+}
+
+.sign-in-btn:hover {
+    background-color: #EBEDFF;
+    color: #402CA3;
+}
+
+.create-btn:hover {
+    color: white;
+    transform: translateY(-3px);
+    background-image: linear-gradient(135deg, #7f71ee, #5e93ef);
+}
+
+/* -------Hero------- */
+
+.hero {
+    background-image: url("Resources/hero-background.jpg");
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    position: relative;
+    min-height: 100vh;
+    padding: 40px;
+}
+
+.built-for {
+    background-color: white;
+    border: 1px solid rgba(128, 128, 128, 0.067);
+    border-radius: 20px;
+    padding: 10px;
+    margin-bottom: 20px;
+    color: #64748A;
+    font-weight: 600;
+    box-shadow: 0 10px 24px rgba(99, 102, 241, 0.20);
+}
+
+.built-for svg {
+    color: #6555E6;
+    padding-right: 3px;
+}
+
+.hero-title {
+    margin-bottom: 10px;
+    font-size: 72px;
+    font-weight: 800;
+    line-height: 1.02;
+    color: #0b1226;
+}
+
+.hero-title .grad {
+    background-image: linear-gradient(135deg, #6d5df0 0%, #4f8bf5 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.hero-text {
+    color: #64748A;
+    margin-top: 25px;
+    font-size: 18px;
+    max-width: 500px;
+}
+
+.hero-btn {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 25px;
+}
+
+.btn-build {
+    background-image: linear-gradient(135deg, #6d5df0, #4f8bf5);
+    color: white;
+    font-weight: 600;
+    padding: 15px 20px 15px 20px;
+    border-radius: 20px;
+    box-shadow: 0 10px 24px rgba(99, 102, 241, 0.20);
+    transform: translateY(0);
+    text-decoration: none;
+    text-align: center;
+    transition: all 0.5s ease;
+}
+
+.btn-explore {
+    color: #0b1226;
+    font-weight: 600;
+    background-color: white;
+    padding: 15px 20px 15px 20px;
+    border-radius: 20px;
+    border: 1px solid rgba(128, 128, 128, 0.104);
+    box-shadow: 0 10px 24px rgba(146, 146, 168, 0.388);
+    text-decoration: none;
+    text-align: center;
+    transition: all 0.5s ease;
+}
+
+.btn-build:hover {
+    color: white;
+    transform: translateY(-3px);
+    background-image: linear-gradient(135deg, #7f71ee, #5e93ef);
+}
+
+.btn-explore:hover {
+    background-color: #EBEDFF;
+    border: 1px solid #7f71ee;
+    color: #402CA3;
+}
+
+.points {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+    color: #64748A;
+}
+
+.points svg {
+    margin-right: 2px;
+    color: #10b981;
+}
+
+.port-ex {
+    position: relative;
+    padding: 70px;
+}
+
+.port-ex-pic img {
+    width: 130%;
+}
+
+.float-card {
+    position: absolute;
+    z-index: 5;
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 16px 40px rgba(30, 41, 90, .18);
+}
+
+.views {
+    left: 30px;
+    top: 30px;
+    padding: 15px;
+    animation: floating 4s ease-in-out infinite;
+}
+
+.float-card.views small {
+    display: block;
+    font-size: 12px;
+    color: #64748A;
+}
+
+.float-card.views strong {
+    font-size: 24px;
+    font-weight: 800;
+    color: #0b1226;
+}
+
+.published {
+    right: -10px;
+    bottom: 50px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 15px 10px 15px;
+    animation: floating 4s ease-in-out infinite;
+}
+
+.correct-circul svg {
+    color: #10b981;
+}
+
+.float-card.published b {
+    display: block;
+    font-size: 12px;
+    color: #0b1226;
+}
+
+.float-card.published small {
+    font-size: 12px;
+    color: #64748A;
+}
+
+@keyframes floating {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* -------carousels------- */
+
+.carousels {
+    width: 100%;
+    overflow: hidden;
+    padding: 30px;
+    background-color: white;
+}
+
+.templates-track {
+    display: flex;
+    width: max-content;
+    animation: scroll-templates 60s linear infinite;
+}
+
+.templates-group {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    padding-right: 25px;
+}
+
+.templates-group img {
+    width: 280px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+    flex-shrink: 0;
+    transition: transform 0.3s ease;
+}
+
+@keyframes scroll-templates {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+/* -------features------- */
+
+.features {
+    padding: 50px;
+    background-color: white;
+}
+
+.title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.title>p {
+    color: #402CA3;
+    font-weight: 700;
+}
+
+.title h2 {
+    color: #101828;
+    font-size: 40px;
+    font-weight: 800;
+}
+
+.features-group {
+    margin-top: 60px;
+}
+
+.feature-card {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #E2E8F0;
+    border-radius: 15px;
+    padding: 20px 20px;
+    transform: translateY(0);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
+    transition: all 0.5s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 10px rgba(0, 0, 0, 0.12);
+}
+
+.feature-card svg {
+    color: #6555E6;
+    background-color: #E7EBFD;
+    padding: 15px;
+    border-radius: 12px;
+    margin: 10px 0 10px 0;
+}
+
+.feature-card:hover svg {
+    background-image: linear-gradient(135deg, #6d5df0, #4f8bf5);
+    color: white;
+}
+
+.feature-card h3 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #101828;
+}
+
+.feature-card p {
+    font-size: 14px;
+    color: #64748A;
+}
+
+/* -------port-steps------- */
+
+.port-steps {
+    background-color: #101828;
+    color: white;
+    padding: 70px;
+}
+
+.port-steps-title {
+    margin: 10px 0 40px 0;
+}
+
+.port-steps-title h2 {
+    font-size: 48px;
+    font-weight: 800;
+}
+
+.work-btn {
+    font-size: 14px;
+    font-weight: 600;
+    background-image: linear-gradient(135deg, #6d5df0, #4f8bf5);
+    border-radius: 15px;
+    padding: 10px 20px;
+    color: white;
+    margin-top: 45px;
+    margin-bottom: 45px;
+    transform: translateY(0);
+    box-shadow: 0 10px 24px rgba(99, 102, 241, 0.20);
+    transition: all 0.5s ease;
+}
+
+.work-btn:hover {
+    color: white;
+    background-image: linear-gradient(135deg, #7e6fed, #5890f0);
+    transform: translateY(-5px);
+}
+
+.step-card {
+    background-color: #1B2333;
+    border: 1px solid #313847;
+    border-radius: 15px;
+    padding: 20px;
+}
+
+.step-card p:first-child {
+    font-size: 48px;
+    font-weight: 800;
+    background-image: linear-gradient(135deg, #4f8bf5, #6d5df0);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.step-card p:last-child {
+    font-size: 18px;
+    font-weight: 600;
+    color: #E2E8F0;
+}
+
+@media (max-width: 700px) {
+    .port-steps-title {
+        margin-bottom: 70px;
+    }
+
+    .work-btn{
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+
+    .hero-title {
+        font-size: 60px;
+    }
+}

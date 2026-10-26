@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="CSS/bootstrap.min.css">
+    <link rel="stylesheet" href="CSS/all.min.css">
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+
+<body>
+    <header class="sticky-top">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+
+                <a class="navbar-brand d-flex align-items-center gap-2" href="#">
+                    <img src="Resources/Portify-logo.png" alt="Logo" class="Portify-logo">
+                    Portify
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="offcanvas offcanvas-top" tabindex="-1" id="navbarNav" aria-label="Menu">
+                    <!-- <div class="offcanvas-header">
+                        <h5 class="offcanvas-title">Menu</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#navbarNav" aria-label="Close"></button>
+                    </div> -->
+
+                    <div class="offcanvas-body flex-grow-1 align-items-lg-center">
+                        <ul class="navbar-nav mx-lg-auto">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Explore Templates</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">How It Works</a>
+                            </li>
+                        </ul>
+
+                        <div class="sign-btns mt-3 mt-lg-0">
+                            <a href="#" class="sign-in-btn d-none d-lg-inline-block">Sign In</a>
+                            <a href="#" class="create-btn">Create My Portfolio</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero d-flex align-items-center">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <span class="built-for d-inline-block"><i class="fa-solid fa-star"></i> Built for students,
+                        developers, designers, and freelancers.</span>
+
+                    <h1 class="hero-title">Your Story<br>Deserves a<br>
+                        <span class="grad">Beautiful<br>Portfolio.</span>
+                    </h1>
+
+                    <p class="hero-text">
+                        Turn your skills, projects, and experience into a professional portfolio website in minutes.
+                        No coding required.
+                    </p>
+
+                    <div class="hero-btn">
+                        <a href="#" class="btn-build">Build My Portfolio <i class="fa-solid fa-arrow-right"></i></a>
+                        <a href="#" class="btn-explore">Explore Templates</a>
+                    </div>
+
+                    <ul class="points list-unstyled">
+                        <li><i class="fa-solid fa-check"></i> No code</li>
+                        <li><i class="fa-solid fa-check"></i> 6 templates</li>
+                        <li><i class="fa-solid fa-check"></i> Your own link</li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-6 overflow-hidden">
+                    <div class="port-ex">
+
+                        <div class="float-card views">
+                            <small>Profile views</small>
+                            <strong>+248</strong>
+                        </div>
+
+                        <div class="port-ex-pic">
+                            <img src="Resources/portfolio-pic/portfolio-1.png" alt="Portfolio">
+                        </div>
+
+                        <div class="float-card published">
+                            <span class="correct-circul"><i class="fa-solid fa-circle-check"></i></span>
+                            <div><b>Published</b><small>portify.app/Alex</small></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="carousels">
+        <div class="templates-track">
+
+            <div class="templates-group">
+                <img src="Resources/portfolio-pic/portfolio-1.png" alt="Portfolio Template 1">
+                <img src="Resources/portfolio-pic/portfolio-2.png" alt="Portfolio Template 2">
+                <img src="Resources/portfolio-pic/portfolio-3.png" alt="Portfolio Template 3">
+                <img src="Resources/portfolio-pic/portfolio-5.png" alt="Portfolio Template 5">
+                <img src="Resources/portfolio-pic/portfolio-6.png" alt="Portfolio Template 6">
+                <img src="Resources/portfolio-pic/portfolio-7.png" alt="Portfolio Template 7">
+            </div>
+
+            <div class="templates-group">
+                <img src="Resources/portfolio-pic/portfolio-1.png" alt="">
+                <img src="Resources/portfolio-pic/portfolio-2.png" alt="">
+                <img src="Resources/portfolio-pic/portfolio-3.png" alt="">
+                <img src="Resources/portfolio-pic/portfolio-5.png" alt="">
+                <img src="Resources/portfolio-pic/portfolio-6.png" alt="">
+                <img src="Resources/portfolio-pic/portfolio-7.png" alt="">
+            </div>
+
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="container-fluid">
+            <div class="title">
+                <p class="feature-title">FEATURES</p>
+                <h2>Everything You Need to Stand Out</h2>
+            </div>
+
+            <div class="features-group row g-3">
+                <div class="col-12 col-lg-3">
+                    <div class="feature-card h-100">
+                        <span><i class="fa-solid fa-upload"></i></span>
+                        <h3>CV Import</h3>
+                        <p>Upload your resume as a PDF and review the details before they land in your profile.</p>
+                    </div>
+                </div>
+
+                <div class="col-12 col-lg-3">
+                    <div class="feature-card h-100">
+                        <span><i class="fa-solid fa-table-list"></i></span>
+                        <h3>Beautiful Portfolio Templates</h3>
+                        <p>Six hand-crafted designs for developers, designers, data scientists and graduates.</p>
+                    </div>
+                </div>
+
+                <div class="col-12 col-lg-3">
+                    <div class="feature-card h-100">
+                        <span><i class="fa-solid fa-arrow-pointer"></i></span>
+                        <h3>Live Editing and Preview</h3>
+                        <p>Every change appears instantly — see exactly what recruiters will see.</p>
+                    </div>
+                </div>
+
+                <div class="col-12 col-lg-3">
+                    <div class="feature-card h-100">
+                        <span><i class="fa-solid fa-rocket"></i></span>
+                        <h3>One-Click Publishing</h3>
+                        <p>Claim your username and share a single, polished link everywhere.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="port-steps">
+        <div class="container-fluid">
+            <div
+                class="port-steps-title d-flex flex-column flex-md-row justify-content-between align-items-start align-items-md-end gap-3">
+                <h2>From blank page to live <br> portfolio in four steps.</h2>
+                <a href="#" class="work-btn text-decoration-none d-inline-flex align-items-center gap-2">
+                    See how it works <i class="fa-solid fa-arrow-right-long"></i>
+                </a>
+            </div>
+
+            <div class="row g-3">
+
+                <div class="col-12 col-lg-3">
+                    <div class="step-card h-100">
+                        <p>01</p>
+                        <p>Add your information.</p>
+                    </div>
+                </div>
+
+                <div class="col-12 col-lg-3">
+                    <div class="step-card h-100">
+                        <p>02</p>
+                        <p>Choose your favorite design.</p>
+                    </div>
+                </div>
+
+                <div class="col-12 col-lg-3">
+                    <div class="step-card h-100">
+                        <p>03</p>
+                        <p>Customize your portfolio.</p>
+                    </div>
+                </div>
+
+                <div class="col-12 col-lg-3">
+                    <div class="step-card h-100">
+                        <p>04</p>
+                        <p>Publish and share your link.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="JS/bootstrap.bundle.min.js"></script>
+    <script src="JS/all.min.js"></script>
+</body>
+
+</html>
